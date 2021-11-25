@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+/*头部*/
+header{
+
+    width: 100%;
+    height: 75.996px;
+    background-color: #fff;
+    display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid beige;
+
+   
+}
+nav{
+    display: inline-flex;
+    align-items: center;
+}
+header img{
+    width: 131.99px;
+    height: 51.18px;
+}
+header ul{
+    list-style: none;
+    display: inline-flex;
+}
+header ul li{
+    width: 90px;
+    height: 32px;
+    font-size: 20px;
+}
