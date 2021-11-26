@@ -1,12 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>仿注册</title>
+    <link rel="stylesheet" href="./css/regist.css">
+    <link rel="stylesheet" href="./css/common.css">
 </head>
+
 <body>
-    
+
+    <!--极果头部-->
+    <header>
+        <img src="./img/logonew.png" alt="">
+        <!--头部整体-->
+        <div class="headall">
+
+            <!--头部左边-->
+            <nav>
+                <ul>
+                    <li><a href="./in.html">首页</a></li>
+                    <li><a href="./play/kuwan.html">酷玩</a></li>
+                    <li><a href="">导购</a></li>
+                    <li><a href="">试用</a></li>
+                    <li><a href="">报告</a></li>
+
+                </ul>
+            </nav>
+            <!--头部右边-->
+            <div class="headright">
+                <a href="" class="search"> </a>
+                <a href="" class="login">注册</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+     
+    <section class="report-box regMain">
+		<div class="wrap regBox">
+			<h2 class="title">注册极果</h2>
+			<form class="regForm" name="my_f1" action="" method="">
+				<p><input type="text" placeholder="请输入登录手机号"  id="tel"/>
+              <span></span>
+                </p>  
+
+				<p>
+					<input type="text" placeholder="请输入图片校验码"  id="imgCode"/>
+					<img src="./img/imgCode.jpg" width="132" height="35"/>
+                    <span></span>
+				</p>
+
+				<p>
+					<input type="text" placeholder="请输入4位数字验证码"   id="code"/>
+					<a href="javascript:void(0)" class="getCode">获取验证码</a>
+                    <span></span>
+				</p>
+
+				<p><input type="text" placeholder="请输入用户名 6-12位" id="user" />
+                    <span></span>
+                </p>
+
+				<p><input type="password" placeholder="请输入6-12位密码"  id="psw1"/>
+                <span></span>
+                </p>
+                 
+				<p><input type="password" placeholder="确定密码"  id="psw2"/>
+                <span></span>
+                </p>
+				
+				<p><button id="submit">立即注册</button></p>
+			</form>
+		</div>
+	</section>
+
+
+
+
+    <!--极果底部-->
+    <!--底部主内容-->
+    <footer class="fort">
+
+        <div class="fortcontent">
+            <dl><img src="./img/code.png" alt=""></dl>
+            <dl>
+                <dt class="one"><img src="./img/logoImg.jpg" alt=""></dt>
+                <dd>全球酷玩试用导购平台<br>酷·新奇·好玩·品质</dd>
+                <dd>微信添加“JguoJguo” <br>获取我们的服务。</dd>
+            </dl>
+            <dl>
+                <dt>免费试用</dt>
+                <dd><a href="help.html#lc">试用流程</a></dd>
+                <dd><a href="help.html#cg">如何提高成功率</a></dd>
+            </dl>
+            <dl>
+                <dt>友情链接</dt>
+                <dd><a href="#">智东西</a><a href="#">WEIBUSI</a></dd>
+                <dd><a href="#">搜狐IT</a><a href="#">腾讯科技</a></dd>
+                <dd><a href="#">搜狐数码</a><a href="#">凤凰科技</a></dd>
+                <dd><a href="#">凤凰数码</a><a href="#">PConline</a></dd>
+                <dd><a href="#">泡泡网</a><a href="#">3W咖啡</a></dd>
+                <dd><a href="#">ZUK社区</a><a href="#">亿觅emie</a></dd>
+                <dd><a href="#">极客公园</a><a href="#">易迅易启玩</a></dd>
+                <dd><a href="#">果库</a></dd>
+            </dl>
+            <dl>
+                <dt>购买攻略</dt>
+                <dd><a href="#">美亚海淘教程</a></dd>
+                <dd><a href="#">日亚海淘教程</a></dd>
+                <dd><a href="#">海淘转运攻略</a></dd>
+                <dd><a href="#">kickstarter 众筹购买攻略</a></dd>
+                <dd><a href="#">indiegogo 众筹购买攻略</a></dd>
+            </dl>
+            <dl>
+                <dt>厂商合作</dt>
+                <dd><a href="about.html">关于极果</a></dd>
+                <dd><a href="about.html#connect">联系我们</a></dd>
+                <dd><a href="mailto:BD@jiguo.com">商务合作：BD@jiguo.com</a></dd>
+                <dd><a href="mailto:CEO@jiguo.com">CEO邮箱：CEO@jiguo.com</a></dd>
+            </dl>
+
+        </div>
+
+        <!--底部版权-->
+
+        <div class="fortbottom">
+
+            © 2016 极果版权所有
+
+        </div>
+
+
+
+    </footer>
 </body>
+
 </html>
+<script>
+    var tel=document.getElementById('tel');
+    var imgCode=document.getElementById('imgCode');
+    var user=document.getElementById('user');
+    var span_=document.getElementsByTagName('span');
+    var psw1=document.getElementById('psw1');
+    var psw2=document.getElementById('psw2');
+    var sub=document.getElementById('submit');
+    // 手机号
+    tel.onblur=function(){
+        reg=/^1[34578][0-9]{9}$/;
+
+        if(tel.value==''){
+			span_[0].innerHTML='手机号不能为空';
+			span_[0].style.color='red';
+				return false;
+		}else if(!reg.test(tel.value)){
+			span_[0].innerHTML='请输入正确的手机号';
+			span_[0].style.color='red';
+		    return false;
+		}else{
+			span_[0].innerHTML=' 正确';
+			span_[0].style.color='green';
+			return true;
+		}
+	
+    }
+    // 图片校正码
+   imgCode.onblur=function(){
+       reg=/[r2b7]/g
+       if(imgCode.value==''){
+           span_[1].innerHTML='不能为空';
+           span_[1].style.color='red';
+       }else if(reg.test(imgCode.value)){
+           span_[1].innerHTML='正确';
+           span_[1].style.color='green';
+       }else{
+           span_[1].innerHTML='请正确填写后提交';
+           span_[1].style.color='red';
+       }
+   }
+//    验证码
+
+var code =document.getElementById('code');
+
+code.onblur=function(){
+    reg=/^\d{4}$/;
+    if(reg.test(code.value)){
+        span_[2].innerHTML='正确';
+        span_[2].style.color='green';
+    }else if(code.value==''){
+        span_[2].innerHTML='验证码不能为空';
+        span_[2].style.color='red';
+    }else{
+        span_[2].innerHTML='请重新输入';
+        span_[2].style.color='red';
+    }
+}
+
+    //  用户名
+    user.onblur=function(){
+		reg=/^[\w\u4e00-\u9fa5]{6,12}$/;
+		if(user.value==''){
+			span_[3].innerHTML='不能为空';
+			span_[3].style.color='red';
+				return false;
+		}else if(!reg.test(user.value)){
+			span_[3].innerHTML=' 长度不在范围内或者存在非法字符';
+			span_[3].style.color='red';
+		    return false;
+		}else{
+			span_[3].innerHTML=' 正确';
+			span_[3].style.color='green';
+			return true;
+		}
+	}
+//    密码
+    psw1.onblur=function(){
+		var reg=/^\w{6,12}$/;
+		var reg1=/[^0-9]/;
+		var reg2=/[^a-zA-Z]/;
+
+		if(psw1.value==''){
+			span_[4].innerHTML='不能为空';
+			span_[4].style.color='red';
+			return false;
+		}
+		else if(!reg.test(psw1.value)){
+			span_[4].innerHTML='长度不在范围内或者存在非法字符';
+			span_[4].style.color='red';
+            return false;
+
+		}else if(!reg1.test(psw1.value)){
+			span_[4].innerHTML='不能全是数字';
+			span_[4].style.color='red';
+			return false;
+		} else if(!reg2.test(psw1.value)){
+			span_[4].innerHTML='不能全是字母';
+			span_[4].style.color='red';
+			return false;
+		}else{
+			span_[4].innerHTML='正确';
+			span_[4].style.color='green';
+            return true;
+		}
+	}
+// 重复密码
+	psw2.onblur=function(){
+	     if(psw2.value==''){
+			 span_[5].innerHTML='不能为空';
+			 span_[5].style.color='red';
+            return false;
+		 } else if(psw2.value!=psd.value){
+			span_[5].innerHTML='两次密码不一致';
+			span_[5].style.color='red';
+            return false;
+		 } else{
+           span_[5].innerHTML='正确'
+		   span_[5].style.color='green';
+            return true;
+		 }
+	}
+
+
+    sub.onclick=function(){
+	  if(tel.onblur()&&imgCode.onblur()&&code.onblur()&& user.onblur()&&psw1.onblur()&&psw2.onblur()){
+		
+		  alert('注册成功');
+	  }else{
+		  alert('请正确填写后提交');
+	  }
+  }
+
+</script>
