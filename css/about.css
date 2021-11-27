@@ -19,6 +19,9 @@ header{
    border-bottom: 1px solid beige; 
 
 }
+header nav li a:hover{
+    color: red;
+}
 
 .headall{
     display: inline-flex;
@@ -86,6 +89,11 @@ header ul li a{
     align-items: center;
     font-size: 15px;
     margin-left: 20px;
+    transition: all .7s ;
+}
+.login:hover{
+    color: white;
+    background-color: #fe5341;
 }
 
 /*内容侧边栏*/
@@ -273,5 +281,5 @@ height: 160px;
     font-size: 13px;
     color: #a3a3a3;
     position: absolute;
-    bottom: 0px;
+    bottom: 25px;
 }

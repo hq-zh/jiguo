@@ -8,22 +8,6 @@ body{
     padding: 0px;
 }
 /*极果头部*/
-
-
-.focus-info{
-    text-align:right;
-    padding-top:35px;
-    transform:translate(800px,-800px);
-   
-    animation:rotateIn 1s ease both;}
-@keyframes rotateIn{
-	0%{
-		transform:translate(800px,-800px);
-	}
-	100%{
-		transform:translate(0);
-	}
-}
 header{
 
     width: 100%;
@@ -139,11 +123,17 @@ header ul li a:hover{
     .focus-info{
         text-align:right;
         padding-top:35px;
-        /* transform:translate(800px,-800px);
-        -moz-animation:rotateIn 1s ease both;
-        -webkit-animation:rotateIn 1s ease both;animation:rotateIn 1s ease both;*/
-    
-    } 
+        transform:translate(800px,-800px);
+       
+        animation:rotateIn 1s ease both;}
+    @keyframes rotateIn{
+        0%{
+            transform:translate(800px,-800px);
+        }
+        100%{
+            transform:translate(0);
+        }
+    }
     .focus-info h2{
         font-size:34px;
         margin-bottom:15px;
@@ -384,8 +374,18 @@ header ul li a:hover{
 }
 .guide ul li img{ 
     width: 100%;
-    
-   
+}
+.guide ul li img:hover,.report-box ul li img:hover{
+    animation:fade infinite alternate .5s;
+}
+@keyframes fade{
+	
+	0%{
+		opacity:0.5;
+	}
+    100%{
+        opacity: 1;
+    }
 }
 
 .playMore{
