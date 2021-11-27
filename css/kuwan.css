@@ -1,13 +1,9 @@
 body{
     display:flex;
-    /* position: relative; */
     flex-direction: column;
     align-items: center;
     margin: 0px;
     padding: 0px;
-}
-nav li a:hover{
-    color: red;
 }
 /*极果头部*/
 header{
@@ -88,126 +84,10 @@ header ul li a{
     align-items: center;
     font-size: 15px;
     margin-left: 20px;
-    transition: all .7s ;
-}
-.login:hover{
-    color: white;
-    background-color: #fe5341;
-}
-
-/**注册**/
-.regBox{
-    background:#fff;
-}
-.regBox .title:after{
-    background:#fe5341;
-}
-.regForm input{
-    background:#f7f7f7;
-    color:#a3a3a3;
-}
-.regForm p.psw label{
-    color:#a3a3a3;
-    background:#f7f7f7;
-}
-.regForm p:nth-child(3) .getCode{
-    color:#a3a3a3;
-}
-.regForm button{
-    background:#fe5341;
-    color:#fff;
-}
-.regForm button:hover{
-    background:#fd301b;
 }
 
 
-.regMain{
-    padding-bottom:35px;
-    padding-top:25px;
-}
-.regBox{
-    border-radius:8px;
-    box-sizing:border-box;
-    border:1px #d7d7d7 solid;
-}
-.regBox .title{
-    position:relative;
-    padding:20px 0 20px 25px;
-    font-size:20px;
-}
-.regBox .title:after{
-    content:"";
-    position:absolute;
-    display:block;
-    width:6px;
-    height:25px;
-    left:0;
-    top:24px;
-}
-.regForm{
-    width:400px;
-    margin:50px auto 150px;
-}
-.regForm p{
-    margin-top:27px;
-}
-.regForm input{
-    height:50px;
-    padding-left:10px;
-    width:100%;
-    box-sizing:border-box;
-    font-size:16px;
-    border:1px #eee solid;
-    border-radius:10px;
-}
-.regForm input:required:valid{
-    border:1px #eee solid;
-}
-.regForm p:nth-child(2),.regForm p:nth-child(3){
-    position:relative;
-}
-.regForm p:nth-child(2) input,.regForm p:nth-child(3) input{
-    width:245px;
-}
-.regForm p:nth-child(2) img,.regForm p:nth-child(3) .getCode{
-    position:absolute;
-    bottom:0;
-    right:0;
-}
-.regForm p:nth-child(3) .getCode{
-    display:block;
-    box-sizing:border-box;
-    width:132px;
-    height:50px;
-    line-height:50px;
-    border:1px #a3a3a3 solid;
-    border-radius:10px;
-    font-size:16px;
-    text-align:center;
-}
-.regForm button{
-    border: none;
-    width:100%;
-    cursor:pointer;
-    height:50px;
-    text-align:center;
-    line-height:50px;
-    font-size:20px;
-    border-radius:10px;
-}
-.regForm p{
-    position: relative;
-}
-.regForm span{
-    width: 120px;
-    display: inline-block;
-    position: absolute;
-    top: 15px;
-    right: -150px;
-    /* display: none; */
-    
-}
+
 /*极果底部*/
 
 .fort{
@@ -216,7 +96,7 @@ header ul li a{
     height: 358px;
     background: #505050;
     position: absolute;
-    bottom: -450px; 
+    bottom: 0px; 
     display: flex;  
     align-items: center;
     justify-content: center; 
@@ -274,5 +154,5 @@ height: 160px;
     font-size: 13px;
     color: #a3a3a3;
     position: absolute;
-    bottom: 25px;
+    bottom: 0px;
 }

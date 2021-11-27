@@ -108,8 +108,12 @@ header ul li a:hover{
     align-items: center;
     font-size: 15px;
     margin-left: 20px;
+    transition: all .7s ;
 }
-
+.login:hover{
+    color: white;
+    background-color: #fe5341;
+}
 
  /* 大图片 */
 .focus{
@@ -390,10 +394,16 @@ header ul li a:hover{
 .playMore .more-btn{
     background:url(../img/more.png) no-repeat left center;
     color:#fe5341;
+    
 }
-/* .playMore .loading{
-    background-image:url(../img/loading-icon.gif);
-} */
+.playMore .loading{
+    display: none;
+    color:#fe5341;
+}
+.playMore .loading img{
+    margin-top: -2px;
+    
+}
 
 .playMore{
     text-align:center;
@@ -477,7 +487,7 @@ height: 160px;
     font-size: 13px;
     color: #a3a3a3;
     position: absolute;
-    bottom: 0px;
+    bottom: 25px;
 }
 
 

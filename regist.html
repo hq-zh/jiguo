@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -23,9 +23,9 @@
                 <ul>
                     <li><a href="./in.html">首页</a></li>
                     <li><a href="./play/kuwan.html">酷玩</a></li>
-                    <li><a href="">导购</a></li>
-                    <li><a href="">试用</a></li>
-                    <li><a href="">报告</a></li>
+                    <li><a href="./guid/index.html">导购</a></li>
+                    <li><a href="./use/index.html">试用</a></li>
+                    <li><a href="./report/index.html">报告</a></li>
 
                 </ul>
             </nav>
@@ -273,5 +273,30 @@ code.onblur=function(){
 		  alert('请正确填写后提交');
 	  }
   }
+
+//   获取验证码
+  var getCode=document.getElementsByClassName('getCode')[0];
+  var timer;
+  var a=60;
+  getCode.addEventListener('click',function(){
+    clearInterval(timer);
+     timer=setInterval(function(){
+         a--;
+         getCode.innerHTML=a+'秒后重新发送';
+         if(a<=0){
+             clearInterval(timer);
+             getCode.innerHTML='获取验证码';
+         } else  if(a==57){
+           span_[2].innerHTML='验证码已发送,请注意查收';
+           span_[2].style.color='green';  
+   }else if(a==55){
+    alert('123456');
+    span_[2].style.display='none';
+   }
+       
+     },1000)
+  })
+ 
+  
 
 </script>
